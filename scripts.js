@@ -1,3 +1,45 @@
+// THE JAVASCRIPT CODE FOR THE MENU 
+
+function toggleMenu(){
+    let nav_items = document.getElementById('nav_items');
+    let hero_section = document.querySelector('header_container');
+    var menu_btn = document.getElementById('menu_btn');
+    var close_btn = document.getElementById('close_btn');
+    
+
+
+
+    if (nav_items.classList.contains('show')){
+        nav_items.classList.remove('show');
+        menu_btn.style.display = 'block';
+        window.location.reload();
+
+    }else{
+        nav_items.classList.add('show');
+        menu_btn.style.display = 'none';
+        close_btn.style.display = 'block';
+
+    }
+}
+
+
+
+var menu_btn = document.getElementById('menu_btn');
+menu_btn.addEventListener('click', toggleMenu);
+
+var close_btn = document.getElementById('close_btn')
+close_btn.addEventListener('click', toggleMenu)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

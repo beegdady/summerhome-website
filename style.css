@@ -26,7 +26,8 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /* outline: 1px solid purple;  */
+    outline: 1px solid purple; 
+    
 }
 
 html{
@@ -37,6 +38,7 @@ body{
     font-family: 'Martian Mono', monospace;
     color: var(--dark-color);
     background-color: var(--white-color);
+    
 }
 
 .container{
@@ -109,6 +111,8 @@ img{
 section{
     max-width: 100vw;
     padding-bottom: var(--bottom-section-padding);
+    overflow: hidden;
+
 }
 
 
@@ -131,7 +135,7 @@ nav{
     align-items: center;
 }
 
-nav button{
+.menu_btn, .close_btn{
     display: none;
 }
 
@@ -144,6 +148,10 @@ nav button{
     gap: 2rem;
 }
 
+.tablogin_signup{
+    display: none;
+}
+
 
 /* header */
 header{
@@ -151,6 +159,8 @@ header{
     max-width: 100vw;
     text-align: center;
     padding-bottom: var(--bottom-section-padding);
+    overflow: hidden;
+
 }
 
 .header_title{
@@ -410,6 +420,7 @@ header{
 footer{
     background: var(--pri-color);
     color: var(--white-color);
+    overflow: hidden;
 }
 
 .footer_container{
@@ -472,4 +483,70 @@ footer{
     text-align: center;
     font-weight: 400;
     padding: 1rem 0;
+}
+
+
+
+@media screen and (max-width : 1024px) {
+   
+    .container{
+        width: var(--container-width-tablet);
+    }
+    
+
+    h1{
+        font-size: 4.5rem;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+
+    h3{
+        font-size: 2.5rem;
+    }
+
+    section{
+        padding-bottom: var(--bottom-section-padding-mobile);
+    }
+
+ 
+
+    .nav_items, .nav_signin-signup{
+        display: none;
+    }
+
+    .menu_btn{
+        display: block;
+        width: 3rem;
+        height: 2rem;
+        background: transparent;
+    }
+
+    .menu_btn i{
+        font-size: 2rem;
+        color: var(--white-color);
+    }
+    #close_btn{
+        display: none;
+        font-size: 2rem;
+        background: transparent;
+        color: var(--white-color);
+    }
+
+    .show{
+        background-color: black;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .tablogin_signup{
+        display: block;
+    }
+
+
 }
