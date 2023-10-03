@@ -541,13 +541,15 @@ footer{
     }
 
     .show{
-        background-color: black;
+        background-color: var(--pri-color);
         color: white;
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         width: 90%;
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     .tablogin_signup{
