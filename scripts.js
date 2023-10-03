@@ -12,6 +12,8 @@ function toggleMenu(){
     if (nav_items.classList.contains('show')){
         nav_items.classList.remove('show');
         menu_btn.style.display = 'block';
+        close_btn.style.display = 'none';
+
         window.location.reload();
 
     }else{
@@ -23,25 +25,20 @@ function toggleMenu(){
 }
 
 
-
 var menu_btn = document.getElementById('menu_btn');
 menu_btn.addEventListener('click', toggleMenu);
 
-var close_btn = document.getElementById('close_btn')
-close_btn.addEventListener('click', toggleMenu)
+var close_btn = document.getElementById('close_btn');
+close_btn.addEventListener('click', toggleMenu);
 
-
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener('scroll', function() {
+    let nav_items = document.getElementById('nav_items');
+    if (nav_items.classList.contains('show')) {
+      nav_items.classList.remove('show');
+      menu_btn.style.display = 'block';
+      close_btn.style.display = 'none';
+    }
+  });
 
 
 var faqicon = document.getElementsByClassName('faq_icon');
