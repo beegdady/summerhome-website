@@ -240,10 +240,13 @@ header{
 .about_article{
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 3rem;
     align-items: center;
     margin-top: 3rem;
     
+}
+
+.about_content{
+    padding: 1.2rem;
 }
 
 
@@ -605,6 +608,17 @@ footer{
         grid-template-columns: 50% 50%;
     }
 
+    .download_cta{
+        /* padding: 1rem 5rem; */
+        font-size: 1rem;
+    }
 
+    .download_cta span{
+        width: 8rem;
+    }
+
+    .footer_container{
+        grid-template-columns: repeat(2,1fr);
+    }
   
 }
